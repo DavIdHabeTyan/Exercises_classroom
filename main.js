@@ -126,7 +126,7 @@ function margeArray(user, status){
 console.log(margeArray(user, status))
 
  */
-
+/*
 const arr = [
     {
         name: "John",
@@ -150,7 +150,7 @@ const arr = [
     }
 ];
 
-function filteredGender(list){
+function filteredGender(list) {
     const obj = {}
     obj.woman = list.filter(elem => {
         return elem.gender === "female"
@@ -168,9 +168,64 @@ console.log(filteredGender(arr))
 //// array method map. squere
 
 function square(arr) {
-    return arr.map(elem => {
-        return elem**2
+    return arr.map(elem => elem ** 2)
+
+}
+
+console.log(square([10, 15, 30, 90]))
+
+
+const arr2 = [
+    {
+        id: 1,
+        name: "John",
+    },
+    {
+        id: 2,
+        name: "Jane",
+
+    },
+    {
+        id: 3,
+        name: "Vandam"
+    },
+    {
+        id: 4,
+        name: "betmen"
+    }
+]
+
+function findId(list) {
+    return list.map(elem => {
+        return elem.id
     })
 }
 
-console.log(square([10,15,30,90]))
+console.log(findId(arr2))
+
+ */
+
+function Counter(initalizationNumber){
+    this.number = initalizationNumber;
+
+    this.increment = function(){
+        this.number++
+    }
+
+    this.decrement =function(){
+        this.number--
+    }
+
+    this.getCount = function (){
+    return    this.number
+    }
+}
+
+const counter = new Counter(10);
+const count = counter.getCount()
+counter.increment()
+counter.increment()
+counter.decrement()
+console.log(counter.getCount())
+
+
