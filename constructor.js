@@ -27,6 +27,8 @@ console.log(counter.getCount())
 
 
 /// check salary
+
+/*
 function User(name, age){
     this.firstName = name;
     this.age = age;
@@ -43,3 +45,25 @@ function User(name, age){
 const user = new User("John", 23);
 user.setSalary(1500);
 console.log(user.getSalary())
+*/
+
+
+
+const counter = {
+    count: 0,
+    increment: function () {
+        return counter.count += 1
+    },
+    decrement: function () {
+        return counter.count -= 1
+    },
+    getCount: function () {
+        return counter.count
+    }
+}
+counter.increment();
+counter.increment();
+counter.increment();
+counter.decrement()
+
+console.log(counter.getCount());
