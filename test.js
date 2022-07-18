@@ -9,3 +9,6 @@ function clearRepeatedValue(list) {
 return Object.keys(obj)
 }
 console.log(clearRepeatedValue(arr))
+
+
+
