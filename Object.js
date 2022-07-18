@@ -44,8 +44,11 @@ console.log(outputRepeatElement(arrList))
 
  */
 
+
+
 //find element who do not repeat
 
+/*
 let arrList = ["a", "b", "a", "D", "G", "b", "D", "a", "b"]
 
 function findElementWhoNotRepeat(arr) {
@@ -68,3 +71,41 @@ function findElementWhoNotRepeat(arr) {
 }
 
 console.log(findElementWhoNotRepeat(arrList))
+
+ */
+
+// arandznacnel arrayi meji genderner@
+const arr = [
+   {
+      name: "John",
+      gender: "male"
+   },
+   {
+      name: "Jane",
+      gender: "female"
+   },
+   {
+      name: "Bob",
+      gender: "male"
+   },
+   {
+      name: "Ronaldo",
+      gender: "male"
+   },
+   {
+      name: "Sarah",
+      gender: "female"
+   }
+];
+function filteredGender(list) {
+  let obj = {};
+  obj.man = list.filter(elem => {
+    return elem.gender === "male"
+  });
+  obj.woman = list.filter(elem => {
+    return elem.gender === "female"
+  })
+   return obj
+}
+
+console.log(filteredGender(arr))
