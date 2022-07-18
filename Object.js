@@ -43,3 +43,28 @@ function outputRepeatElement(arr) {
 console.log(outputRepeatElement(arrList))
 
  */
+
+//find element who do not repeat
+
+let arrList = ["a", "b", "a", "D", "G", "b", "D", "a", "b"]
+
+function findElementWhoNotRepeat(arr) {
+   let obj = {};
+   let notRepeatableElem = [];
+   for (let elem of arr) {
+      if (obj[elem]) {
+         obj[elem]++
+      } else {
+         obj[elem] = 1
+      }
+   }
+
+   for (let key in obj) {
+      if (obj[key] === 1) {
+         notRepeatableElem.push(key)
+      }
+   }
+   return notRepeatableElem
+}
+
+console.log(findElementWhoNotRepeat(arrList))
